@@ -1,0 +1,237 @@
+body{
+    background-color: rgb(19, 26, 26);
+}
+nav{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(15px) saturate(100%);
+    transition: 3s;
+}
+@keyframes link1 {
+    0%{
+        rotate: 0deg;
+    }
+    25%{rotate: -90deg;}
+    50%{ rotate: -180deg;
+    }
+    75%{ rotate: -270deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+img{
+    width:200px; 
+    height:200px;
+    border-radius: 50%;
+    animation-name: link1;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+}
+ul a{
+    margin-right: 40px;
+}
+
+ul a:hover{
+    transition: 2s;
+    padding: 10px;
+    transform: scale(2);
+}
+ul a:not(:hover){
+    backdrop-filter: blur(10px);
+    transform: scale(0.9,0.9);
+}
+.menu-icon{
+    display: none;
+}
+.hidden
+{
+    display: none;
+}
+
+
+.menu{
+    position: absolute; 
+    top: 200px;
+    left: 0px;
+    width: auto; 
+    height: auto; 
+    background-color: rgba(0, 0, 0,0.7);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    list-style: none;
+}
+
+@media (max-width: 900px) {
+    nav{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }   
+}
+
+h1{
+    text-align: center;
+}
+input::placeholder{
+    color: black;
+}
+
+textarea::placeholder{
+    color: black;
+}
+@keyframes name {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.container{
+    animation-name: name;
+    animation-duration: 2s;
+    margin-top: 30px;
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    list-style: none;
+    border-radius: 30px;
+    height: auto;
+}
+.container:hover{
+    box-shadow: 10px 10px 10px 10px lightgreen;
+}
+
+ input{
+    position: relative;
+    border-color: #69b937;
+    border: 2px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 30px;
+    padding: 20px 10px 20px 10px;
+    background: linear-gradient(to top,rgb(41, 83, 83),#69b937);
+    font-size: x-large;
+}
+
+textarea{
+    text-align: center;
+    position: relative;
+    width: 90%;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 20px 10px 20px 10px;
+    border-radius: 30px; 
+    background: linear-gradient(to top,rgb(41, 83, 83),#69b937);
+}
+button{
+    position: relative;
+    border-radius: 30px; 
+    padding: 20px; 
+    color: black; 
+    background-color: #69b937;
+    margin-left: 45%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+button:hover {
+    filter: drop-shadow(10px 10px 15px gray);
+    transform: scaleX(1.5);
+}
+
+@media (max-width:1200px) {
+    .container{
+        display: grid;
+        place-items: center;
+        font-size: x-large;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px){
+    
+    .container{
+        display: grid;
+        place-items: center;
+        font-size: x-large;
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-top: 200px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    .menu-icon{
+        display: block;
+        background-color: inherit;
+        border-style: none;
+    }
+    .menu-icon:hover{
+        color: aliceblue;
+    }
+    #menu1{
+        display: none;
+    }
+
+}
+@media(max-width: 768px) {
+    #menu1{
+        display: none;
+    }
+    .container{
+        display: grid;
+        place-items: center;
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .menu-icon{
+        display: block;
+        background-color: inherit;
+        border-style: none;
+    }
+    .menu-icon:hover{
+        color: aliceblue;
+    }
+    input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+}

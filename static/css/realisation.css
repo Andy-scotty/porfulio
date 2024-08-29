@@ -1,0 +1,168 @@
+body{
+    background: radial-gradient(circle,rgb(41, 83, 83),#69b937);
+}
+
+
+nav{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(15px) saturate(100%);
+    transition: 3s;
+}
+@keyframes link1 {
+    0%{
+        rotate: 0deg;
+    }
+    25%{rotate: -90deg;}
+    50%{ rotate: -180deg;
+    }
+    75%{ rotate: -270deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+nav img{
+    width:200px; 
+    height:200px;
+    border-radius: 50%;
+    animation-name: link1;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+}
+ul a{
+    margin-right: 40px;
+}
+
+ul a:hover{
+    transform: scale(2);
+    transition: 2s;
+    padding: 10px;
+}
+ul a:not(:hover){
+    backdrop-filter: blur(10px);
+    transform: scale(0.9,0.9);
+}
+.menu-icon{
+    display: none;
+}
+.hidden
+{
+    display: none;
+}
+
+
+.menu{
+    position: absolute; 
+    top: 200px;
+    left: 0px;
+    width: auto; 
+    height: auto; 
+    background-color: rgba(0, 0, 0,0.7);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    animation-name: name;
+    animation-duration: 3s;
+    width: 70%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px gray;
+    list-style: none;
+    margin-bottom: 5%;
+}
+
+
+@keyframes name {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.gallery{
+    flex: 1 0 300px;
+    margin: 20px;
+    float: left;
+}
+.gallery:hover {
+    transition: 0.7s;
+    transform: scaleX(1.2);
+    border-radius: 20px;
+    border: 5px solid rgb(49, 35, 35);
+    .desc{
+        background-color: black;
+        color: aliceblue;
+    }
+}
+
+
+.gallery img{
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
+    animation-name: image;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.desc{
+    border-radius: 20px;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 900px) {
+    nav{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }   
+
+}
+@media(max-width: 768px) {
+    .container{
+        margin-top: 150px;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 100px;
+    }
+    .gallery{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .menu-icon{
+        display: block;
+        background-color: inherit;
+        border-style: none;
+    }
+    #menu1{
+        display: none;
+    }
+    .menu-icon:hover{
+        color: aliceblue;
+    }
+
+}

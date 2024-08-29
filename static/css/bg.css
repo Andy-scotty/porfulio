@@ -1,0 +1,28 @@
+
+
+@keyframes example {
+    0%{background-color: red;}
+    25%{background-color: yellow; left: 0px; top: 0px;}
+    50%{background-color: aqua; left: 200px; top: 0px;}
+    75%{background-color: black; left: 200px; top: 200px;}
+    87.5%{background-color: blue; left: 0px; top: 200px;}
+    100%{background-color: red; left: 0px; top: 0px;}
+}
+
+.container{
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.tooltip .tooltiptext{
+    opacity: 1;
+    transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext{
+    opacity: 1;
+}

@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/css/realisation.css' %}">
+    <script src="{% static '/js/portfulio.js' %}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" style="border-radius: 30px;">
+          <div class="navbar-header">
+            <img src="{% static '/img/Screenshot_from_2024-08-13_16-01-15-removebg-preview (1).png' %}"  width="200px" height="200px">
+          </div>
+          <div class="container-fluid">
+            <ul class="nav navbar-nav" style="justify-content: space-between;" id="menu1">
+              <li class=""><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'realisation' %}">Gallery</a></li>
+              <li><a href="{% url 'service' %}">Services</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <button class="menu-icon" onclick="list()" id="open">
+              <svg xmlns="http://www.w3.org/2000/svg" style="color: black;" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+            <button class="menu-icon hidden" onclick="clos()" id="close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+              </svg>
+            </button>
+            <ul class="menu hidden" id="menu">
+              <li><a style="color: brown;" href="{% url 'home' %}">Home</a></li>
+              <li><a style="color: brown;" href="{% url 'about' %}">About</a></li>
+              <li><a style="color: brown;" href="{% url 'realisation' %}">Gallery</a></li>
+              <li><a style="color: brown;" href="{% url 'service' %}">Services</a></li>
+              <li><a style="color: brown;" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        </header>
+          
+    <div class="container">
+        <div class="gallery">
+            <a href="{% static '/img/Screenshot from 2024-08-18 16-29-21.png' %}">
+            <img src="{% static '/img/Screenshot from 2024-08-18 16-29-21.png' %}" alt="">
+        </a>
+            <div class="desc">formulaire d'inscription enligne</div>
+        </div>
+        <div class="gallery">
+            <a href="{% static 'img/g1.jpg' %}">
+            <img src="{% static 'img/g1.jpg' %}" alt="">
+            </a>
+            <div class="desc">carte d'invitation</div>
+        </div>
+        <div class="gallery">
+            <a href="{% static '/img/Screenshot from 2024-08-18 16-39-58.png' %}">
+            <img src="{% static '/img/Screenshot from 2024-08-18 16-39-58.png' %}" alt="">
+            </a>
+            <div class="desc">page web</div>
+        </div>
+        <div class="gallery">
+          <a href="{% static '/img/fashion.jpg' %}">
+          <img src="{% static '/img/fashion.jpg' %}" alt="">
+      </a>
+          <div class="desc">presentation d'un fashion salon</div>
+      </div>
+      <div class="gallery">
+          <a href="{% static 'img/home-patisserie.png' %}">
+          <img src="{% static 'img/home-patisserie.png' %}" alt="">
+          </a>
+          <div class="desc">representation d"une patisserie</div>
+      </div>
+      <div class="gallery">
+          <a href="{% static '/img/propos-patisserie.png' %}">
+          <img src="{% static '/img/propos-patisserie.png' %}" alt="">
+          </a>
+          <div class="desc">page web pour les details</div>
+      </div>
+      <div class="gallery">
+        <a href="{% static '/img/realisation-patisserie.png' %}">
+        <img src="{% static '/img/realisation-patisserie.png' %}" alt="">
+        </a>
+        <div class="desc">page web pour les realisation de gateaux</div>
+    </div>
+    </div>
+</body>
+</html>

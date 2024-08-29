@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>about</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Utilisez les liens absolus vers les CDNs -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static '/css/about.css' %}">
+  <script src="{% static '/js/portfulio.js' %}" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-inverse" style="border-radius: 30px;">
+  <div class="navbar-header">
+    <img src="{%  static '/img/Screenshot_from_2024-08-13_16-01-15-removebg-preview (1).png' %}"  width="200px" height="200px">
+  </div>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" style="justify-content: space-between;" id="menu1">
+      <li ><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'realisation' %}">Gallery</a></li>
+      <li><a href="{% url 'service' %}">Services</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+    <button class="menu-icon" onclick="list()" id="open">
+      <svg xmlns="http://www.w3.org/2000/svg" style="color: black;" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </button>
+    <button class="menu-icon hidden" onclick="clos()" id="close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+      </svg>
+    </button>
+        <ul class="menu hidden" id="menu">
+          <li><a style="color: brown;" href="{% url 'home' %}">Home</a></li>
+          <li><a style="color: brown;" href="{% url 'about' %}">About</a></li>
+          <li><a style="color: brown;" href="{% url 'realisation' %}">Gallery</a></li>
+          <li><a style="color: brown;" href="{% url 'service' %}">Services</a></li>
+          <li><a style="color: brown;" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+  </div>
+</nav>
+</header>
+
+   <div class="container" style="color: white;">
+     <div class="col-6">
+            <img src="{% static '/img/name.jpg' %}" class="im" width="100%" height="auto" style="padding-right: 10px; object-fit: cover;">
+     </div>
+
+    <div class="col-6">
+        <h5 style="color:white; font-size: x-large;">i'm named</h5>
+        <h1 style="color: black;"><b>TANGOT FOPA ANDY SCOTT</b></h1>
+        i am a university student in the university of yaounde 1 with course choice computer science.
+         I was born on the 29/06/2006 in yaounde and i originate from the west region. I did my primary school at luckykids bilingual school, my 
+         seconday education at the <b>Government Bilingual High School of Ekorezock</b> where i obtained my ordinary level and <b>Government Bilingual High School of Etoug-Ebe</b> 
+         where i obtained my advanced level. I presently reside in yaounde 7 
+         at <b>CAMP SONEL OYOM-ABANG</b> and i'm a junior programmer having as competences;
+         <p style="color: yellowgreen; display: block; ">
+          ( skill:Capacity )
+              C programming: 50% <br>
+              html: 35% <br>
+              CSS: 60% <br>
+              JS: 30% <br>
+              Django: 40% <br>
+         </p>   
+      </div>
+    </div>
+
+
+</body>
+</html>

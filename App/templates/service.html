@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static '/css/service.css' %}">
+  <script src="{% static '/js/portfulio.js' %}" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse" style="border-radius: 30px;">
+      <div class="navbar-header">
+        <img src="{% static '/img/Screenshot_from_2024-08-13_16-01-15-removebg-preview (1).png' %}" width="200px"
+          height="200px">
+      </div>
+      <div class="container-fluid">
+        <ul class="nav navbar-nav" style="justify-content: space-between;" id="menu1">
+          <li class=""><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'realisation' %}">Gallery</a></li>
+          <li><a href="{% url 'service' %}">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <button class="menu-icon" onclick="list()" id="open">
+          <svg xmlns="http://www.w3.org/2000/svg" style="color: black;" width="50" height="50" fill="currentColor"
+            class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </button>
+        <button class="menu-icon hidden" onclick="clos()" id="close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-circle-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+          </svg>
+        </button>
+        <ul class="menu hidden" id="menu">
+          <li><a style="color: brown;" href="{% url 'home' %}">Home</a></li>
+          <li><a style="color: brown;" href="{% url 'about' %}">About</a></li>
+          <li><a style="color: brown;" href="{% url 'realisation' %}">Gallery</a></li>
+          <li><a style="color: brown;" href="{% url 'service' %}">Services</a></li>
+          <li><a style="color: brown;" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="service1">
+      <h2 style="color: black;">creation de site web</h2>
+      <p>
+        mise en form de site web interactive pour une fluidité entre l"utilisant et la page
+      </p>
+    </div>
+    <div class="service1">
+      <h2 style="color: black;">production de formulaire en ligne</h2>
+      <p>
+        creation de base de donnes pour acceuillir tout utilisateur et maintien de cette base de donnes par l'administrateur du client ciblé
+      </p>
+    </div>
+    <div class="service1">
+      <h2 style="color: black;">conception de carte d'invitation et flyers</h2>
+      <p>
+        mise en forme des different carte d'invitation pour differents occassions choisi par le clients
+      </p>
+    </div>
+    <div class="service1">
+      <h2 style="color: black;">creation d'application en utilisant django</h2>
+      <p>
+        production en masse d'application en linge avec une fluidité et une compréhension extremement simplifier pour les utilisateur
+      </p>
+    </div>
+    <div class="service1">
+      <h2 style="color: black;">creation de logo</h2>
+      <p>
+        production de logo en 2d ou en 3d bien designer pour representer le l'entreprise du client ou le client lui meme.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

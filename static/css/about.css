@@ -1,0 +1,160 @@
+
+body{
+    background: radial-gradient(circle,#69b937,rgb(41, 83, 83));
+}
+nav{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-justify:auto;
+    cursor: pointer;
+    backdrop-filter: blur(15px) saturate(100%);
+    transition: 3s;
+}
+@keyframes link1 {
+    0%{
+        rotate: 0deg;
+    }
+    25%{rotate: -90deg;}
+    50%{ rotate: -180deg;
+    }
+    75%{ rotate: -270deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+nav img{
+    width:200px; 
+    height:200px;
+    border-radius: 50%;
+    animation-name: link1;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+}
+ul a{
+    margin-right: 40px;
+}
+
+ul a:hover{
+    transition: 2s;
+    padding: 10px;
+    transform: scale(2);
+}
+ul a:not(:hover){
+    backdrop-filter: blur(10px);
+    transform: scale(0.9,0.9);
+}
+.menu-icon{
+    display: none;
+}
+.hidden
+{
+    display: none;
+}
+
+
+
+.menu{
+    list-style: none;
+    position: absolute; 
+    top: 200px;
+    left: 0px;
+    width: auto; 
+    height: auto; 
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.im{
+    border-radius: 10%;
+    box-shadow: 10px 10px 15px #69b937;
+}
+
+
+.container{
+    font-size: x-large;
+    font-weight: bold;
+        animation-name: name;
+        animation-duration: 5s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    height: 500px;
+    border-radius: 30px;
+    margin-top: 5%;
+}
+
+
+@keyframes name {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    nav{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }   
+    .container{
+        font-size: larger;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        margin-top: 100px;
+    }
+    .im{
+        width: 70%;
+    }  
+
+}
+
+@media(max-width: 768px) {
+    .container{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        margin-top: 100px;
+    }
+        .menu-icon{
+            display: block;
+            background-color: inherit;
+            border-style: none;
+        }
+        .menu-icon:hover{
+            color: aliceblue;
+        }
+    .im{
+        width: 70%;
+    }
+    #menu1{
+        display: none;
+    }
+}
+@media (min-width: 900px) and (max-width: 1330px) {
+    .container{
+        width: 100%;
+        font-size: larger;
+        }
+    
+}
